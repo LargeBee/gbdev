@@ -1,2 +1,5 @@
 Emulicious/
 _GBDEV.code-workspace
+*.gb
+*.o
+*.sym
