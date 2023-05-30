@@ -170,6 +170,7 @@ BounceOnBottom:
     ld [wBallMomentumY], a
 BounceDone:
 
+    ; Paddle collisions don't seem to be working for some reason
     ; First, check if the ball is low enough to bounce off the paddle.
     ld a, [_OAMRAM]
     ld b, a
