@@ -1,6 +1,7 @@
 Emulicious/
 _GBDEV.code-workspace
 .vscode/
+*/build/
 *.gb
 *.o
 *.sym
