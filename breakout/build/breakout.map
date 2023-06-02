@@ -1,0 +1,50 @@
+ROM0 bank #0:
+	EMPTY: $0000-$00ff ($0100 bytes)
+	SECTION: $0100-$0714 ($0615 bytes) ["Header"]
+	         $0150 = EntryPoint
+	         $0150 = WaitVBlank
+	         $0192 = ClearOam
+	         $01cb = Main
+	         $01d2 = WaitVBlank2
+	         $01ef = BounceOnTop
+	         $020a = BounceOnRight
+	         $0225 = BounceOnLeft
+	         $0240 = BounceOnBottom
+	         $025b = BounceDone
+	         $027e = PaddleBounceDone
+	         $0281 = CheckLeft
+	         $0289 = Left
+	         $0298 = CheckRight
+	         $02a0 = Right
+	         $02af = UpdateKeys
+	         $02cf = UpdateKeys.onenibble
+	         $02dc = UpdateKeys.knownret
+	         $02dd = GetTileByPixel
+	         $02f6 = IsWallTile
+	         $030b = Memcopy
+	         $0315 = Tiles
+	         $04b5 = TilesEnd
+	         $04b5 = Tilemap
+	         $06f5 = TilemapEnd
+	         $06f5 = Paddle
+	         $0705 = PaddleEnd
+	         $0705 = Ball
+	         $0715 = BallEnd
+	EMPTY: $0715-$3fff ($38eb bytes)
+	TOTAL EMPTY: $39eb bytes
+
+WRAM0 bank #0:
+	SECTION: $c000-$c001 ($0002 bytes) ["Ball Data"]
+	         $c000 = wBallMomentumX
+	         $c001 = wBallMomentumY
+	SECTION: $c002-$c003 ($0002 bytes) ["Input Variables"]
+	         $c002 = wCurKeys
+	         $c003 = wNewKeys
+	SECTION: $c004-$c004 ($0001 byte) ["Counter"]
+	         $c004 = wFrameCounter
+	EMPTY: $c005-$dfff ($1ffb bytes)
+	TOTAL EMPTY: $1ffb bytes
+
+SUMMARY:
+	ROM0: 1557 bytes used / 14827 free
+	WRAM0: 5 bytes used / 8187 free
