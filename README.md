@@ -12,3 +12,5 @@ for example in the hello-world folder to compile the program to a .gb file you w
 bash ../build.sh hello-world
 ```
 without the extension
+
+Makefile was taken from [Here](https://gist.github.com/tobiasvl/3ce2767391666fb93bbf55d79bc06bca)
