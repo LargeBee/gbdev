@@ -13,7 +13,7 @@ INC_DIR         :=  inc/
 SRC_ASM         :=  $(call rwildcard, $(SRC_DIR)/, *.asm)
 OBJ_FILES       :=  $(addprefix $(BUILD_DIR)/obj/, $(SRC_ASM:src/%.asm=%.obj))
 OBJ_DIRS        :=  $(addprefix $(BUILD_DIR)/obj/, $(dir $(SRC_ASM:src/%.asm=%.obj)))
-ASMFLAGS        :=  -p0 -v -i $(INC_DIR)
+ASMFLAGS        :=  -p0 -v -l -i $(INC_DIR)
 LINKERFLAGS     :=  -m $(OUTPUT).map -n $(OUTPUT).sym -d
 FIXFLAGS        :=  -v -p0
 

@@ -1,4 +1,8 @@
-INCLUDE "../hardware.inc"
+INCLUDE "hardware.inc"
+
+DEF BRICK_LEFT EQU $05
+DEF BRICK_RIGHT EQU $06
+DEF BLANK_TILE EQU $08
 
 SECTION "Header", ROM0[$100]
 
@@ -174,6 +178,7 @@ BounceDone:
     ld a, [_OAMRAM]
     ld b, a
     ld a, [_OAMRAM + 4]
+    add a, 6
     cp a, b
     jp nz, PaddleBounceDone ; If the ball isn't at the same Y position as the paddle, it can't bounce.
     ; Now let's compare the X positions of the objects to see if they're touching.
